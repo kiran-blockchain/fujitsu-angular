@@ -1,5 +1,8 @@
 <div class="row">
-<div class="card col-md-3" *ngFor="let p of products" >
+<div class="card col-md-3 {{p.styleClass}}" *ngFor="let p of products" 
+(mouseover)="changeColor(p)"
+(mouseout)="removeColor(p)"
+(click)="viewDetails(p)">
     <img class="card-img-top" 
     src={{p.imageUrl}} alt="Card image cap">
     <div class="card-body">
@@ -8,3 +11,13 @@
     </div>
   </div>
 </div>
+<!-- Details Card-->
+<div class="card col-md-8" *ngIf="selectedProduct">
+    <img class="card-img-top" 
+    src={{selectedProduct.imageUrl}} alt="Card image cap">
+    <div class="card-body">
+      <p class="card-text">{{selectedProduct.name}}</p>
+      <p class="card-text">{{selectedProduct.description}}</p>
+      <button class="btn btn-primary">{{selectedProduct.price}}</button>
+    </div>
+  </div>

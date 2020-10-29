@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   title ="Fujistu"
   navItems =[
   {name:'Home',index:1},
-  {name:"About",index:2}
+  {name:"About",index:2},
+  {name:'Register',index:3},
+  {name:"Login",index:4},
+  {name:'Products',index:5}
 ]
 }
