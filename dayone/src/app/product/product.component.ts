@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HubService } from '../hub.service';
 
 @Component({
   selector: 'app-product',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
   selectedProduct=null;
-  constructor() { }
+  constructor(private hubService:HubService) { }
 
   ngOnInit(): void {
   }
@@ -53,5 +54,8 @@ export class ProductComponent implements OnInit {
 
     }
     
+  }
+  addItemToCart(item){
+    this.hubService.addToCart(item);
   }
 }

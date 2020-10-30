@@ -10,6 +10,7 @@
         <p class="card-text">{{p.date|date:'MMMM-dd-yyyy hh:mm'}}</p>
         <p class="card-text">{{p.name|uppercase}}</p>
       <button class="btn btn-primary">{{p.price|currency:'GBP'}}</button>
+      <button class="btn btn-primary" (click)="addItemToCart(selectedProduct)">Add To cart</button>
     </div>
   </div>
 </div>
@@ -20,6 +21,7 @@
     <div class="card-body">
       <p class="card-text">{{selectedProduct.name}}</p>
       <p class="card-text">{{selectedProduct.description}}</p>
-      <button class="btn btn-primary">{{selectedProduct.price}}</button>
+     
+      <button class="btn btn-primary" (click)="addItemToCart(selectedProduct)">Add To cart</button>
     </div>
   </div>

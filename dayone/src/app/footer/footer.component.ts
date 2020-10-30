@@ -17,10 +17,7 @@ export class FooterComponent implements OnInit {
     
     //this.selectedCountry=this.apiService.getSelecedCountry();
     this.apiService.getCountryListFromApi().subscribe((x:any)=>{
-      this.countries = x.map(y=>{
-        y.code=y.aplha2code;
-        return y;
-      })
+      this.countries =x;
     })
   }
   selectCountry(){

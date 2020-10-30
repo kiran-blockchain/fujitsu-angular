@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PhoneFormatterPipe } from './pipe/formatter.pipe';
 import { ApiService } from './api.service';
+import { HubService } from './hub.service';
 
 
 @NgModule({
@@ -38,7 +39,7 @@ import { ApiService } from './api.service';
     HttpClientModule
   ],
   //Register the Service with Module
-  providers: [ApiService],
+  providers: [ApiService,HubService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

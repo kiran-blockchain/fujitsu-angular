@@ -16,6 +16,7 @@ export class ApiService {
     getCountryListFromApi(){
         let url ="https://restcountries.eu/rest/v2/all"
        return this.httpClient.get(url); 
+       
     }
 
     setSelectedCountry (countryName){

@@ -5,7 +5,7 @@
         Contact us 
         
         <select [(ngModel)]="selectedCountry" (change)="selectCountry()">
-            <option *ngFor="let c of countries" [value]="c.code">{{c.name}}</option>
+            <option *ngFor="let c of countries" [value]="c.alpha2Code">{{c.name}}</option>
         </select><br/>
         {{phone|phoneformatter:selectedCountry}}
     </div>

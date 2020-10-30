@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HubService } from '../hub.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private hubService:HubService) { }
 
   ngOnInit(): void {
-  }
+    this.hubService.fetchCartInfo().subscribe(item=>{
+      this.cartData.push(item);
+    })
+  };
+  cartData=[];
+  cartCount=0;
   title ="Fujistu"
   navItems =[
   {name:'Home',index:1},

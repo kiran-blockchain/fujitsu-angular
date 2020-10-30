@@ -9,6 +9,12 @@
         <li class="nav-item" *ngFor ="let item of navItems">
           <a class="nav-link" [routerLink]="item.name">{{item.name}}</a>
         </li>
+        <li class="nav-item" >
+          <a class="nav-link" >Cart <span class="badge">
+            {{cartData.length}}
+          </span>
+        </a>
+        </li>
       
       </ul>
       <ul><li>
