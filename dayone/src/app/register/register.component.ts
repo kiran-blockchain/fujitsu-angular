@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 import { ERROR_MESSAGES } from '../utils/validations';
 
 @Component({
@@ -8,7 +9,7 @@ import { ERROR_MESSAGES } from '../utils/validations';
 })
 export class RegisterComponent implements OnInit {
   validations={};
-  constructor() {
+  constructor(private apiService:ApiService) {
     this.validations= ERROR_MESSAGES;
    }
   registerUser = {
@@ -20,14 +21,12 @@ export class RegisterComponent implements OnInit {
     gender: "",
     country:""
   };
+  countryList:any
   ngOnInit(): void {
+    this.registerUser.country=this.apiService.getSelecedCountry();
+    this.countryList = this.apiService.getCountryListStatic();
   }
-  countryList = [{
-    name: "India",
-    code: "IN"
-  },
-  {
-    name: "United States",
-    code: "USA"
-  }]
+  selectCountry(country){
+    this.apiService.setSelectedCountry(country)
+  }
 }

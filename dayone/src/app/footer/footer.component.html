@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<hr/>
+<div class="row">
+    <div class="col-md-3">About us</div>
+    <div class="col-md-3">
+        Contact us 
+        
+        <select [(ngModel)]="selectedCountry" (change)="selectCountry()">
+            <option *ngFor="let c of countries" [value]="c.code">{{c.name}}</option>
+        </select><br/>
+        {{phone|phoneformatter:selectedCountry}}
+    </div>
+</div>

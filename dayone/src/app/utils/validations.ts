@@ -8,5 +8,5 @@ export const ERROR_MESSAGES= {
     mobile_min_length:'Mobile number must be 10 digits',
     mobile_max_length:'Mobile number must be 10 digits',
     country_required:'Please select country',
-    email_required:'Email is required'
+    email_required:'Email is required' 
 }
