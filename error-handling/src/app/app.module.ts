@@ -16,7 +16,6 @@ import { RegisterComponent } from './register/register.component';
 import { PhoneFormatterPipe } from './pipe/formatter.pipe';
 import { ApiService } from './api.service';
 import { HubService } from './hub.service';
-import { DropDownComponent } from './dropdown/dropdown.component';
 
 
 @NgModule({
@@ -31,8 +30,7 @@ import { DropDownComponent } from './dropdown/dropdown.component';
     LoginComponent,
     RegisterComponent,
     //register the phontformatter pipe
-    PhoneFormatterPipe,
-    DropDownComponent
+    PhoneFormatterPipe
   ],
   imports: [
     BrowserModule,

@@ -8,10 +8,10 @@ import { ERROR_MESSAGES } from '../utils/validations';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  validations = {};
-  constructor(private apiService: ApiService) {
-    this.validations = ERROR_MESSAGES;
-  }
+  validations={};
+  constructor(private apiService:ApiService) {
+    this.validations= ERROR_MESSAGES;
+   }
   registerUser = {
     firstName: "kiran  ",
     lastName: "",
@@ -19,25 +19,14 @@ export class RegisterComponent implements OnInit {
     mobileNumber: "",
     password: "",
     gender: "",
-    country: ""
+    country:""
   };
-  countryList: any
+  countryList:any
   ngOnInit(): void {
-    this.registerUser.country = this.apiService.getSelecedCountry();
+    this.registerUser.country=this.apiService.getSelecedCountry();
     this.countryList = this.apiService.getCountryListStatic();
   }
-  selectCountry(country) {
+  selectCountry(country){
     this.apiService.setSelectedCountry(country)
   }
-
-  yearList = [
-    { value: 2020, name: 2020 },
-    {
-      value: 2019, name: 2019
-    }];
-    monthList = [
-      { value: 1, name: "Jan" },
-      {
-        value: 2, name: "Feb"
-      }];
 }
