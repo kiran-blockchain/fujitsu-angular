@@ -16,8 +16,13 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     
     //this.selectedCountry=this.apiService.getSelecedCountry();
-    this.apiService.getCountryListFromApi().subscribe((x:any)=>{
+    this.apiService.getCountryListFromApi().subscribe(
+      //success
+      (x:any)=>{
       this.countries =x;
+    },
+     (error)=>{
+      console.log("An error occurred in receiving the data",error);
     })
   }
   selectCountry(){

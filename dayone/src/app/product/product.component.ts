@@ -37,6 +37,14 @@ export class ProductComponent implements OnInit {
       price: 4000,
       description:'Red Tape is a nice product',
       imageUrl: "https://rukminim1.flixcart.com/image/452/542/k6v2ykw0/shoe/b/x/c/m7-22509-grey-8-m7-by-metronaut-grey-original-imafp87nt9gj93d4.jpeg?q=50"
+    },
+    {
+      name: "Red Tape",
+      
+      date:new Date().toUTCString(),
+      price: 4000,
+      description:'Red Tape is a nice product',
+      imageUrl: "https://rukminim1.flixcart.com/image/452/542/k6v2ykw0/shoe/b/x/c/m7-22509-grey-8-m7-by-metronaut-grey-original-imafp87nt9gj93d4.jpeg?q=50"
     }
   ];
   changeColor(item){
