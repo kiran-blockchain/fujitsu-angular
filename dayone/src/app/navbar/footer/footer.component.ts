@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from 'src/app/api.service';
+
 
 @Component({
   selector: 'app-footer',

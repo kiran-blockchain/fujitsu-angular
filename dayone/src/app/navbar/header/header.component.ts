@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HubService } from '../hub.service';
+import { HubService } from 'src/app/hub.service';
+
 
 @Component({
   selector: 'app-header',
