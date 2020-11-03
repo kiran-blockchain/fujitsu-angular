@@ -18,6 +18,8 @@ import { ApiService } from './api.service';
 import { HubService } from './hub.service';
 import { DropDownComponent } from './dropdown/dropdown.component';
 import { ChangeColorDirective } from './directives/colorchange.directive';
+import { NumbersOnlyDirective } from './directives/numbersOnly.directive';
+import { AlphabetsOnlyOnlyDirective } from './directives/alphabestsOnly.directives';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { ChangeColorDirective } from './directives/colorchange.directive';
     //register the phontformatter pipe
     PhoneFormatterPipe,
     DropDownComponent,
-    ChangeColorDirective
+    ChangeColorDirective,
+    NumbersOnlyDirective,
+    AlphabetsOnlyOnlyDirective
   ],
   imports: [
     BrowserModule,
