@@ -3,10 +3,10 @@
     <div class="col-md-3">About us</div>
     <div class="col-md-3">
         Contact us 
-        
-        <select [(ngModel)]="selectedCountry" (change)="selectCountry()">
+        <app-drop-down [options]="countries" (selectOption)="selectCountry($event)"></app-drop-down>{{selectedCountry}}
+        <!-- <select [(ngModel)]="selectedCountry" (change)="selectCountry()">
             <option *ngFor="let c of countries" [value]="c.alpha2Code">{{c.name}}</option>
-        </select><br/>
-        {{phone|phoneformatter:selectedCountry}}
+        </select><br/>-->
+        {{phone|phoneformatter:selectedCountry}} 
     </div>
 </div>

@@ -19,7 +19,9 @@ export class RegisterComponent implements OnInit {
     mobileNumber: "",
     password: "",
     gender: "",
-    country: ""
+    country: "",
+    yearOfBirth:"",
+    monthOfBirth:""
   };
   countryList: any
   ngOnInit(): void {
@@ -40,4 +42,11 @@ export class RegisterComponent implements OnInit {
       {
         value: 2, name: "Feb"
       }];
+
+      selectedMonth(item){
+        this.registerUser.monthOfBirth= item;
+      }
+      selectedYear(item){
+        this.registerUser.yearOfBirth= item;
+      }
 }

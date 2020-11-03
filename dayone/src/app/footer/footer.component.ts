@@ -19,13 +19,19 @@ export class FooterComponent implements OnInit {
     this.apiService.getCountryListFromApi().subscribe(
       //success
       (x:any)=>{
-      this.countries =x;
+      //this.countries =x;
+      this.countries = x.map(c=>{
+        c.value = c.alpha2Code;
+        c.name = c.name;
+        return c;
+      })
     },
      (error)=>{
       console.log("An error occurred in receiving the data",error);
     })
   }
-  selectCountry(){
+  selectCountry(item){
+    this.selectedCountry = item;
     this.apiService.setSelectedCountry(this.selectedCountry);
   }
   
