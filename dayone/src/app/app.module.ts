@@ -17,6 +17,7 @@ import { PhoneFormatterPipe } from './pipe/formatter.pipe';
 import { ApiService } from './api.service';
 import { HubService } from './hub.service';
 import { DropDownComponent } from './dropdown/dropdown.component';
+import { ChangeColorDirective } from './directives/colorchange.directive';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DropDownComponent } from './dropdown/dropdown.component';
     RegisterComponent,
     //register the phontformatter pipe
     PhoneFormatterPipe,
-    DropDownComponent
+    DropDownComponent,
+    ChangeColorDirective
   ],
   imports: [
     BrowserModule,
