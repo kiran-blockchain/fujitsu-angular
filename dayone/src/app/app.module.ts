@@ -17,9 +17,8 @@ import { PhoneFormatterPipe } from './pipe/formatter.pipe';
 import { ApiService } from './api.service';
 import { HubService } from './hub.service';
 import { DropDownComponent } from './dropdown/dropdown.component';
-import { ChangeColorDirective } from './directives/colorchange.directive';
-import { NumbersOnlyDirective } from './directives/numbersOnly.directive';
-import { AlphabetsOnlyOnlyDirective } from './directives/alphabestsOnly.directives';
+
+import { CustomDirectiveModule } from './directives/directives.module';
 
 
 @NgModule({
@@ -35,16 +34,15 @@ import { AlphabetsOnlyOnlyDirective } from './directives/alphabestsOnly.directiv
     RegisterComponent,
     //register the phontformatter pipe
     PhoneFormatterPipe,
-    DropDownComponent,
-    ChangeColorDirective,
-    NumbersOnlyDirective,
-    AlphabetsOnlyOnlyDirective
+    DropDownComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CustomDirectiveModule,
   ],
   //Register the Service with Module
   providers: [ApiService,HubService],
