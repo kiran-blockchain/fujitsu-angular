@@ -5,21 +5,24 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
+import {AutoCompleteComponent} from './autocomplete/autocomplete.component';
 //prime ng 
 import {CalendarModule} from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
-
+import {AutoCompleteModule} from 'primeng/autocomplete';
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    AutoCompleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CalendarModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    AutoCompleteModule
     
   ],
   providers: [],
