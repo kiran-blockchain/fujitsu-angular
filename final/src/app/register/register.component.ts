@@ -12,4 +12,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
   value: Date;
+  placeHolderText="DOB";
+  placeHolderText2="DOb2";
+  changedData ="";
+  handleChange(data){
+    this.changedData = data; 
+  }
 }

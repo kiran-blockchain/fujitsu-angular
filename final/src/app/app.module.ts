@@ -10,12 +10,14 @@ import {AutoCompleteComponent} from './autocomplete/autocomplete.component';
 import {CalendarModule} from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import {AutoCompleteModule} from 'primeng/autocomplete';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule} from "@angular/common/http";
+import { TextComponent } from './text/text.component'
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    AutoCompleteComponent
+    AutoCompleteComponent,
+    TextComponent
   ],
   imports: [
     BrowserModule,

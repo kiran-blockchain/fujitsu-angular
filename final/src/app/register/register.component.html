@@ -1,1 +1,5 @@
-<p-calendar [(ngModel)]="value"></p-calendar>
+<!-- <p-calendar [(ngModel)]="value"></p-calendar> -->
+
+
+<app-text [placeHolder]="placeHolderText" (onTextChanged)="handleChange($event)"></app-text>
+<h1>{{changedData}}</h1>
