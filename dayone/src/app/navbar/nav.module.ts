@@ -6,12 +6,13 @@ import { DropDownModule } from '../dropdown/dropdown.module';
 import { CustomPipesMModule } from '../pipe/pipes.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
     declarations: [HeaderComponent,FooterComponent],
     providers: [],
-    imports: [FormsModule, DropDownModule,CustomPipesMModule,  BrowserModule,CommonModule],
+    imports: [FormsModule,RouterModule, DropDownModule,CustomPipesMModule,  BrowserModule,CommonModule],
     exports: [HeaderComponent,FooterComponent]
 
 })
