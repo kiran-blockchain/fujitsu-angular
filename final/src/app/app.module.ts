@@ -10,6 +10,7 @@ import {AutoCompleteComponent} from './autocomplete/autocomplete.component';
 import {CalendarModule} from 'primeng/calendar';
 import { FormsModule } from '@angular/forms';
 import {AutoCompleteModule} from 'primeng/autocomplete';
+import {HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import {AutoCompleteModule} from 'primeng/autocomplete';
     CalendarModule,
     BrowserAnimationsModule,
     FormsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    HttpClientModule
     
   ],
   providers: [],

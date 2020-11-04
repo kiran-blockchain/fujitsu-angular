@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {HttpClient} from '@angular/common/http'
 @Component({
   selector: 'app-auto-complete',
   templateUrl: './autocomplete.component.html'
@@ -19,13 +19,16 @@ export class AutoCompleteComponent implements OnInit {
 
   filteredBrands: any[];
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit() {        
       // this.countryService.getCountries().then(countries => {
       //     this.countries = countries;
       // });
-      this.countries =[{name:"India"},{name:"United States"},{name:"Australia"}]
+     /// this.countries =[{name:"India"},{name:"United States"},{name:"Australia"}]
+     this.http.get("https://restcountries.eu/rest/v2/all").subscribe((countries:any)=>{
+       this.countries=countries
+     })
   }
 
   filterCountry(event) {
